@@ -1,0 +1,17 @@
+{% extends 'info.html' %}
+
+{% block title %}
+Редактировать
+{% endblock %}
+
+{% block body %}
+<div class="text-center"   class="container">
+    <h2>Редактирование цветущего растения</h2>
+    <form method="post">
+        <input type="text" name="title" id="title" class="container form-control" placeholder="Введите название" value="{{flower_id.title}}"><br>
+        <textarea name="text" id="text" class="container form-control" placeholder="Введите описание">{{flower_id.text}}</textarea><br>
+        <!--input type="file" name="img" id="img" placeholder="Загрузите картинку"--><br><br>
+        <input type="submit" class="btn btn-success" value="Обновить">
+    </form>
+</div>
+{% endblock %}

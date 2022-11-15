@@ -1,0 +1,21 @@
+{% extends 'info.html' %}
+
+{% block title %}
+Цветущие растения
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1 class="text-center">Цветущие растения</h1><br>
+    {% for el in flowers %}
+    <div class="row">
+        <div class="col-sm-4">
+            <h1><a class="btn" href="/2/{{el.id}}">{{el.title}}</a></h1>
+        </div>
+        <div class="col-sm-8">
+            {{el.text}}
+        </div>
+    </div><br>
+    {% endfor %}
+</div>
+{% endblock %}
